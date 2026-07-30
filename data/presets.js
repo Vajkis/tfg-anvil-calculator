@@ -2418,21 +2418,21 @@ export const METALS = [
           },
           {
             id: 'steel-tfc-bars-double',
-            name: 'Steel Bars- Double Ingot',
+            name: 'Steel Bars - Double Ingot',
             img: 'img/bars/steel.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfc:anvil/steel_bars_double'
           },
           {
             id: 'steel-createdeco-bars-overlay-double',
-            name: 'Steel Bars Overlay- Double Ingot',
+            name: 'Steel Bars Overlay - Double Ingot',
             img: 'img/createdeco_bars/industrial_iron_bars_overlay_composited.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfg:anvil/createdeco_industrial_iron_bars_overlay_double'
           },
           {
             id: 'steel-createdeco-bars-double',
-            name: 'Steel Bars- Double Ingot',
+            name: 'Steel Bars - Double Ingot',
             img: 'img/createdeco_bars/industrial_iron_bars.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfg:anvil/createdeco_industrial_iron_bars_double'
@@ -2846,7 +2846,7 @@ export const METALS = [
           },
           {
             id: 'black-steel-tfc-bars-double',
-            name: 'Black Steel Bars',
+            name: 'Black Steel Bars - Double Ingot',
             img: 'img/bars/black_steel.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfc:anvil/black_steel_bars_double'
@@ -3453,7 +3453,7 @@ export const METALS = [
           },
           {
             id: 'blue-steel-tfc-bars-double',
-            name: 'Blue Steel Bars',
+            name: 'Blue Steel Bars - Double Ingot',
             img: 'img/bars/blue_steel.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfc:anvil/blue_steel_bars_double'
@@ -3843,7 +3843,7 @@ export const METALS = [
           },
           {
             id: 'red-steel-tfc-bars-double',
-            name: 'Red Steel Bars',
+            name: 'Red Steel Bars - Double Ingot',
             img: 'img/bars/red_steel.png',
             last3: ['upset', 'punch', 'punch'],
             recipeId: 'tfc:anvil/red_steel_bars_double'
