@@ -1,0 +1,771 @@
+$bg: #1a1a1a;
+$panel-bg: #262626;
+$panel-bg-hover: #2a2a2a;
+$text: #f5f5f5;
+$accent: #d98e3f;
+$border: #3a3a3a;
+$button-text: #1a1a1a;
+$error: #e06666;
+$scrollbar-thumb: #9f9f9f;
+$scrollbar-thumb-hover: #d1d1d1;
+
+// Hides a scrollable element's native scrollbar — used everywhere a .scrollbar
+// (see below) stands in for it instead. Native ::-webkit-scrollbar styling isn't
+// reliable on recent Chromium/Windows builds (they render their own "Fluent"
+// overlay scrollbar and ignore page CSS), hence the synthetic replacement.
+@mixin hide-native-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Shared square-tile look for .category-row__name and .preset-grid__name — both
+// hold a .tinted-icon and are sized/bordered identically; only the is-active
+// accent differs, since that's keyed off each one's own parent class.
+@mixin tile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: $panel-bg;
+  border: 2px solid $border;
+  border-radius: 4px;
+  padding: 0.4rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    background: $panel-bg-hover;
+  }
+}
+
+// Shared sizing for the raster layers inside .tinted-icon (base + overlay).
+@mixin pixelated-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $text;
+  font-family: system-ui, sans-serif;
+}
+
+// The single source of spacing between every top-level element on the page
+// (heading, each panel, the button, the divider, the results) — everything
+// below relies on this instead of setting its own margin, so there's exactly
+// one place that controls the page's vertical rhythm.
+#app {
+  max-width: 33rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.divider {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 4px;
+  border: none;
+  background-color: $panel-bg;
+}
+
+h1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.modpack-version {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba($text, 0.5);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba($text, 0.5);
+  }
+
+  select,
+  input {
+    background: $panel-bg;
+    color: $text;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+
+    &:hover {
+      background: $panel-bg-hover;
+    }
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.target-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0.375rem;
+  padding: 0.5rem 0 !important;
+  border: none !important;
+  background: transparent !important;
+  cursor: pointer;
+
+  &::-webkit-slider-runnable-track {
+    height: 0.375rem;
+    border-radius: 3px;
+    background: linear-gradient(to right, $accent var(--fill, 0%), $border var(--fill, 0%));
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.375rem;
+    border-radius: 50%;
+    background: $accent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    height: 0.375rem;
+    border-radius: 3px;
+    background: $border;
+  }
+
+  &::-moz-range-progress {
+    height: 0.375rem;
+    border-radius: 3px;
+    background: $accent;
+  }
+
+  &::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $accent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.last-actions {
+  display: flex;
+  gap: 0.5rem;
+
+  &__slot {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    label {
+      font-size: 0.75rem;
+      text-transform: none;
+      letter-spacing: normal;
+      color: rgba($text, 0.5);
+    }
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+// !important is intentional: this utility class must always win over any
+// component-specific rule (e.g. ".last-actions select { width: 100% }") that
+// would otherwise override its hiding — a stray unhidden 100%-of-root select
+// (no positioned ancestor to contain it) is exactly what caused the page to
+// become horizontally scrollable.
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.custom-select {
+  position: relative;
+
+  &__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    text-align: left;
+    background: $panel-bg;
+    color: $text;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid rgba($text, 0.6);
+    }
+
+    &:hover {
+      background: $panel-bg-hover;
+    }
+  }
+
+  &__value {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__list-wrapper {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+
+    // `display: flex` above wins over the UA stylesheet's `[hidden] { display: none }`
+    // (same specificity, but author styles are applied after UA styles) — without
+    // this override, toggling the `hidden` attribute stops hiding the dropdown.
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem;
+    background: $panel-bg;
+    border: 1px solid $border;
+    border-radius: 4px;
+    // max-height: 12rem;
+    overflow-y: auto;
+    @include hide-native-scrollbar;
+
+    li {
+      padding: 0.4rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: $text;
+
+      &:hover {
+        background: $panel-bg-hover;
+      }
+
+      &.is-selected {
+        color: $accent;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.save-preset {
+  display: flex;
+  gap: 0.5rem;
+
+  input {
+    flex: 1;
+  }
+}
+
+.preset-group {
+  margin-top: 0.75rem;
+
+  &__label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba($text, 0.5);
+    cursor: pointer;
+
+    &:hover {
+      color: rgba($text, 0.8);
+    }
+  }
+}
+
+// Single-row, horizontally-scrolling tab strip for built-in preset categories.
+// Wheel-paged the same way the vertical preset lists are (one tile per tick).
+// Its scrollbar affordance is the synthetic .scrollbar--horizontal below it.
+.category-row {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  @include hide-native-scrollbar;
+
+  // `display: flex` above wins over the UA stylesheet's `[hidden] { display: none }`
+  // (same specificity, but author styles are applied after UA styles) — without
+  // this override, toggling `hidden` (e.g. the subcategory row when no metal is
+  // selected) leaves an empty-but-still-rendered flex box behind, which still
+  // shows its own margin even though it has nothing in it.
+  &[hidden] {
+    display: none;
+  }
+
+  li {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+
+    &.is-active .category-row__name {
+      border-color: $accent;
+      color: $accent;
+    }
+  }
+
+  &__name {
+    @include tile-button;
+  }
+}
+
+// A category/preset tile's template shape (see renderTintedIcon in main.js).
+// The base <img> keeps the template's own baked-in pixel-art shading; the
+// (optional) __tint layer sits on top, masked to that same silhouette and
+// mix-blend-mode: multiply'd onto it — the same technique Minecraft uses to
+// tint leather armor / spawn eggs, recoloring while preserving the shading
+// instead of flattening it into one solid color. No __tint layer at all (no
+// color assigned yet) just leaves the template showing its own colors as-is.
+.tinted-icon {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &__base {
+    display: block;
+    @include pixelated-fill;
+  }
+
+  &__tint {
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: multiply;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  // A second texture pass composited as-is (not tinted) on top of base+tint —
+  // e.g. added shading/detail lines — matching how Minecraft layers multiple
+  // texture passes on one item. Not every template has one.
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    @include pixelated-fill;
+    pointer-events: none;
+  }
+}
+
+// Synthetic scrollbar, standing in for native ::-webkit-scrollbar styling
+// everywhere (see the hide-native-scrollbar mixin) — position/size kept in sync
+// with the paired list's scroll position by lib/scrollbar.js. Hidden entirely
+// (via the `hidden` attribute) when that list doesn't actually overflow.
+.scrollbar {
+  position: relative;
+  flex-shrink: 0;
+  background: $panel-bg;
+  border-radius: 4px;
+
+  &__thumb {
+    position: absolute;
+    background: $scrollbar-thumb;
+    border-radius: 4px;
+    cursor: default;
+    touch-action: none;
+
+    &:hover {
+      background: $scrollbar-thumb-hover;
+    }
+  }
+
+  &--horizontal {
+    height: 0.25rem;
+    margin: 0.5rem 0 0;
+
+    .scrollbar__thumb {
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  &--vertical {
+    width: 0.25rem;
+
+    .scrollbar__thumb {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+// Every preset for the selected category, always fully visible — wraps into
+// as many rows as needed instead of scrolling.
+.preset-grid {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  // Same `display: flex` vs `[hidden]` issue as .category-row — needed since an
+  // empty grid (no presets to show) is now hidden outright rather than just
+  // emptied, so it stops showing its own margin with nothing in it.
+  &[hidden] {
+    display: none;
+  }
+
+  li.is-active .preset-grid__name {
+    border-color: $accent;
+    color: $accent;
+  }
+
+  &__name {
+    @include tile-button;
+  }
+}
+
+// Shared tooltip element, created once and repositioned by lib/tooltip.js on
+// hover/focus of any [data-tooltip] element. Lives at the end of <body>
+// (position: fixed, computed from the trigger's own getBoundingClientRect())
+// so it's never clipped by an ancestor's overflow — unlike a CSS ::after tied
+// to the hovered element, which .category-row's overflow-x: auto would clip
+// (that also forces overflow-y: auto, per spec).
+.tooltip {
+  position: fixed;
+  z-index: 20;
+  background: $panel-bg;
+  color: $text;
+  border: 1px solid $border;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+// Paired with a .scrollbar--vertical (see index.html) so the two stay the
+// same height as flex siblings.
+.scrollable-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+  margin: 0.4rem 0 0;
+}
+
+.preset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  max-height: 13.25rem; // 5 items + the gaps between them
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  @include hide-native-scrollbar;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.25rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border: 1px solid $border;
+    background: $panel-bg;
+
+    &:hover {
+      background: $panel-bg-hover;
+    }
+
+    &.is-active {
+      border-color: $accent;
+
+      .preset-list__name {
+        color: $accent;
+      }
+    }
+  }
+
+  &__empty {
+    color: rgba($text, 0.4);
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    background: none;
+    border-style: dashed;
+  }
+
+  &__name {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    background: transparent;
+    border-radius: 4px;
+    color: $text;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0 0.25rem 0 0;
+
+    button {
+      background: transparent;
+      color: rgba($text, 0.8);
+      border: 1px solid $border;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 400;
+      width: 1.625rem;
+      height: 1.625rem;
+      padding: 0;
+
+      &:hover {
+        color: $text;
+        border-color: $accent;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: default;
+
+        &:hover {
+          border-color: $border;
+        }
+      }
+    }
+  }
+}
+
+// Prevents accidental text selection on anything meant to be clicked/dragged,
+// not typed into — .scrollbar__thumb included, since dragging it otherwise
+// selects whatever text sits under the cursor as it moves.
+button,
+summary,
+.preset-list li,
+.category-row li,
+.preset-grid li,
+.custom-select__list li,
+.scrollbar__thumb {
+  user-select: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  background: $accent;
+  color: $button-text;
+  border: none;
+  border-radius: 4px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.result {
+  &__title {
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  &__item {
+    font-weight: 600;
+    color: $accent;
+  }
+
+  &__error {
+    color: $error;
+  }
+
+  // One row of square tiles per phase of the sequence: free setup steps first,
+  // then the required finishing steps — same tile look as .preset-grid__name,
+  // just with the border color keyed off which row it's in instead of an
+  // is-active state.
+  &__row {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    &--setup .result__tile {
+      border-color: $text;
+    }
+
+    &--finish .result__tile {
+      border-color: $accent;
+    }
+  }
+
+  &__tile {
+    @include tile-button;
+    cursor: default;
+
+    img {
+      @include pixelated-fill;
+    }
+
+    &:hover {
+      background: $panel-bg;
+    }
+  }
+
+  // Plain-text breakdown below the tile rows — repeats collapse into a
+  // trailing "x N" instead of listing the same action on its own line
+  // several times over.
+  &__steps {
+    margin: 1.25rem 0 0;
+    background: $panel-bg;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-family: monospace;
+    list-style: none;
+    font-size: 0.875rem;
+  }
+
+  &__value {
+    display: inline-block;
+    width: 3ch;
+    text-align: right;
+  }
+
+  &__step--fixed {
+    color: $accent;
+  }
+}
+
+#calculate {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 12.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 3.75rem;
+
+  &__link {
+    display: flex;
+    color: $text;
+    opacity: 0.6;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
