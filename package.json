@@ -1,6 +1,6 @@
 {
   "name": "tfg-anvil-calculator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Anvil forging calculator for TerraFirmaGreg-Modern modpack - solves action sequences to reach target ratios.",
   "license": "MIT",
   "author": "Vajkis",
@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "sass": "^1.77.0",
-    "vite": "^5.4.0"
+    "vite": "^8.2.0"
   }
 }
