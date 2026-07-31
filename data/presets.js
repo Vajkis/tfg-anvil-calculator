@@ -4,15 +4,13 @@ export const METALS = [
   {
     id: 'copper',
     name: 'Copper',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/copper.png',
     color: getMaterialById('copper').color,
     subcategories: [
       {
         id: 'copper-ingot',
         name: 'Copper Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/copper.png',
         presets: [
           {
             id: 'copper-nugget',
@@ -204,14 +202,12 @@ export const METALS = [
       {
         id: 'copper-double-ingot',
         name: 'Copper Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/copper.png',
         presets: [
           {
-            id: 'copper-sheet',
+            id: 'copper-plate',
             name: 'Copper Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/copper.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/copper_sheet'
           },
@@ -298,8 +294,7 @@ export const METALS = [
       {
         id: 'copper-plate',
         name: 'Copper Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/copper.png',
         presets: [
           {
             id: 'copper-trapdoor',
@@ -327,8 +322,7 @@ export const METALS = [
       {
         id: 'copper-double-plate',
         name: 'Copper Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/copper.png',
         presets: [
           {
             id: 'copper-tuyere',
@@ -442,15 +436,13 @@ export const METALS = [
   {
     id: 'bronze',
     name: 'Bronze',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/bronze.png',
     color: getMaterialById('bronze').color,
     subcategories: [
       {
         id: 'bronze-ingot',
         name: 'Bronze Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/bronze.png',
         presets: [
           {
             id: 'bronze-nugget',
@@ -622,14 +614,12 @@ export const METALS = [
       {
         id: 'bronze-double-ingot',
         name: 'Bronze Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/bronze.png',
         presets: [
           {
-            id: 'bronze-sheet',
+            id: 'bronze-plate',
             name: 'Bronze Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/bronze.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/bronze_sheet'
           },
@@ -702,8 +692,7 @@ export const METALS = [
       {
         id: 'bronze-plate',
         name: 'Bronze Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/bronze.png',
         presets: [
           {
             id: 'bronze-trapdoor',
@@ -724,8 +713,7 @@ export const METALS = [
       {
         id: 'bronze-double-plate',
         name: 'Bronze Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/bronze.png',
         presets: [
           {
             id: 'bronze-tuyere',
@@ -808,15 +796,13 @@ export const METALS = [
   {
     id: 'bismuth-bronze',
     name: 'Bismuth Bronze',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/bismuth_bronze.png',
     color: getMaterialById('bismuth-bronze').color,
     subcategories: [
       {
         id: 'bismuth-bronze-ingot',
         name: 'Bismuth Bronze Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/bismuth_bronze.png',
         presets: [
           {
             id: 'bismuth-bronze-nugget',
@@ -988,14 +974,12 @@ export const METALS = [
       {
         id: 'bismuth-bronze-double-ingot',
         name: 'Bismuth Bronze Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/bismuth_bronze.png',
         presets: [
           {
-            id: 'bismuth-bronze-sheet',
+            id: 'bismuth-bronze-plate',
             name: 'Bismuth Bronze Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/bismuth_bronze.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/bismuth_bronze_sheet'
           },
@@ -1068,8 +1052,7 @@ export const METALS = [
       {
         id: 'bismuth-bronze-plate',
         name: 'Bismuth Bronze Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/bismuth_bronze.png',
         presets: [
           {
             id: 'bismuth-bronze-trapdoor',
@@ -1090,8 +1073,7 @@ export const METALS = [
       {
         id: 'bismuth-bronze-double-plate',
         name: 'Bismuth Bronze Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/bismuth_bronze.png',
         presets: [
           {
             id: 'bismuth-bronze-tuyere',
@@ -1174,15 +1156,13 @@ export const METALS = [
   {
     id: 'black-bronze',
     name: 'Black Bronze',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/black_bronze.png',
     color: getMaterialById('black-bronze').color,
     subcategories: [
       {
         id: 'black-bronze-ingot',
         name: 'Black Bronze Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/black_bronze.png',
         presets: [
           {
             id: 'black-bronze-nugget',
@@ -1354,14 +1334,12 @@ export const METALS = [
       {
         id: 'black-bronze-double-ingot',
         name: 'Black Bronze Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/black_bronze.png',
         presets: [
           {
-            id: 'black-bronze-sheet',
+            id: 'black-bronze-plate',
             name: 'Black Bronze Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/black_bronze.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/black_bronze_sheet'
           },
@@ -1434,8 +1412,7 @@ export const METALS = [
       {
         id: 'black-bronze-plate',
         name: 'Black Bronze Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/black_bronze.png',
         presets: [
           {
             id: 'black-bronze-trapdoor',
@@ -1456,8 +1433,7 @@ export const METALS = [
       {
         id: 'black-bronze-double-plate',
         name: 'Black Bronze Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/black_bronze.png',
         presets: [
           {
             id: 'black-bronze-tuyere',
@@ -1540,15 +1516,13 @@ export const METALS = [
   {
     id: 'cast-iron',
     name: 'Cast Iron',
-    img: 'img/ingot.png',
-    // overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/cast_iron.png',
     color: getMaterialById('cast-iron').color,
     subcategories: [
       {
         id: 'iron-ingot',
         name: 'Cast Iron Ingot',
-        img: 'img/ingot.png',
-        // overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/cast_iron.png',
         presets: [
           {
             id: 'cast-iron-nugget',
@@ -1579,14 +1553,12 @@ export const METALS = [
       {
         id: 'iron-double-ingot',
         name: 'Cast Iron Double Ingot',
-        img: 'img/ingot_double.png',
-        // overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/cast_iron.png',
         presets: [
           {
-            id: 'cast-iron-sheet',
+            id: 'cast-iron-plate',
             name: 'Cast Iron Plate',
-            img: 'img/plate.png',
-            // overlay: 'img/plate_overlay.png',
+            img: 'img/plate/cast_iron.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/iron_sheet'
           }
@@ -1637,8 +1609,7 @@ export const METALS = [
   {
     id: 'wrought-iron',
     name: 'Wrought Iron',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/wrought_iron.png',
     color: getMaterialById('wrought-iron').color,
     subcategories: [
       {
@@ -1663,8 +1634,7 @@ export const METALS = [
           {
             id: 'wrought-iron-ingot',
             name: 'Wrought Iron Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/wrought_iron.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/wrought_iron_from_bloom'
           }
@@ -1673,8 +1643,7 @@ export const METALS = [
       {
         id: 'wrought-iron-ingot',
         name: 'Wrought Iron Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/wrought_iron.png',
         presets: [
           {
             id: 'wrought-iron-nugget',
@@ -1853,14 +1822,12 @@ export const METALS = [
       {
         id: 'wrought-iron-double-ingot',
         name: 'Wrought Iron Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/wrought_iron.png',
         presets: [
           {
-            id: 'wrought-iron-sheet',
+            id: 'wrought-iron-plate',
             name: 'Wrought Iron Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/wrought_iron.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/wrought_iron_sheet'
           },
@@ -1947,8 +1914,7 @@ export const METALS = [
       {
         id: 'wrought-iron-plate',
         name: 'Wrought Iron Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/wrought_iron.png',
         presets: [
           {
             id: 'wrought-iron-trapdoor',
@@ -1990,8 +1956,7 @@ export const METALS = [
       {
         id: 'wrought-iron-double-plate',
         name: 'Wrought Iron Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/wrought_iron.png',
         presets: [
           {
             id: 'wrought-iron-tuyere',
@@ -2125,22 +2090,19 @@ export const METALS = [
   {
     id: 'steel',
     name: 'Steel',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/steel.png',
     color: getMaterialById('steel').color,
     subcategories: [
       {
         id: 'pig-iron',
         name: 'Pig Iron Ingot',
-        img: 'img/ingot.png',
-        // overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/pig_iron.png',
         color: getMaterialById('pig-iron').color,
         presets: [
           {
             id: 'high-carbon-steel-ingot',
             name: 'High Carbon Steel Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/high_carbon_steel.png',
             color: getMaterialById('high-carbon-steel').color,
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/high_carbon_steel_ingot'
@@ -2150,15 +2112,13 @@ export const METALS = [
       {
         id: 'high-carbon-steel-ingot',
         name: 'High Carbon Steel Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/high_carbon_steel.png',
         color: getMaterialById('high-carbon-steel').color,
         presets: [
           {
             id: 'steel-ingot',
             name: 'Steel Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/steel.png',
             color: getMaterialById('steel').color,
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/steel_ingot'
@@ -2168,8 +2128,7 @@ export const METALS = [
       {
         id: 'steel-ingot',
         name: 'Steel Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/steel.png',
         presets: [
           {
             id: 'steel-nugget',
@@ -2355,14 +2314,12 @@ export const METALS = [
       {
         id: 'steel-double-ingot',
         name: 'Steel Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/steel.png',
         presets: [
           {
-            id: 'steel-sheet',
+            id: 'steel-plate',
             name: 'Steel Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/steel.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/steel_sheet'
           },
@@ -2449,8 +2406,7 @@ export const METALS = [
       {
         id: 'steel-plate',
         name: 'Steel Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/steel.png',
         presets: [
           {
             id: 'steel-trapdoor',
@@ -2478,8 +2434,7 @@ export const METALS = [
       {
         id: 'steel-double-plate',
         name: 'Steel Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/steel.png',
         presets: [
           {
             id: 'steel-tuyere',
@@ -2586,22 +2541,19 @@ export const METALS = [
   {
     id: 'black-steel',
     name: 'Black Steel',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/black_steel.png',
     color: getMaterialById('black-steel').color,
     subcategories: [
       {
         id: 'high-carbon-black-steel-ingot',
         name: 'High Carbon Steel Ingot',
-        img: 'img/ingot.png',
-        // overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/high_carbon_black_steel.png',
         color: getMaterialById('high-carbon-black-steel').color,
         presets: [
           {
             id: 'black-steel-ingot',
             name: 'Black Steel Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/steel.png',
             color: getMaterialById('steel').color,
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/black_steel_ingot'
@@ -2611,8 +2563,7 @@ export const METALS = [
       {
         id: 'black-steel-ingot',
         name: 'Black Steel Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/black_steel.png',
         presets: [
           {
             id: 'black-steel-nugget',
@@ -2784,13 +2735,12 @@ export const METALS = [
       {
         id: 'black-steel-double-ingot',
         name: 'Black Steel Double Ingot',
-        img: 'img/_items/black_steel_double_ingot.png',
+        img: 'img/double_ingot/black_steel.png',
         presets: [
           {
-            id: 'black-steel-sheet',
+            id: 'black-steel-plate',
             name: 'Black Steel Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/black_steel.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/black_steel_sheet'
           },
@@ -2856,8 +2806,7 @@ export const METALS = [
       {
         id: 'black-steel-plate',
         name: 'Black Steel Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/black_steel.png',
         presets: [
           {
             id: 'black-steel-trapdoor',
@@ -2878,8 +2827,7 @@ export const METALS = [
       {
         id: 'black-steel-double-plate',
         name: 'Black Steel Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/black_steel.png',
         presets: [
           {
             id: 'black-steel-tuyere',
@@ -2962,15 +2910,13 @@ export const METALS = [
   {
     id: 'tin',
     name: 'Tin',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/tin.png',
     color: getMaterialById('tin').color,
     subcategories: [
       {
         id: 'tin-ingot',
         name: 'Tin Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/tin.png',
         presets: [
           {
             id: 'tin-nugget',
@@ -3007,14 +2953,12 @@ export const METALS = [
       {
         id: 'tin-double-ingot',
         name: 'Tin Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/tin.png',
         presets: [
           {
-            id: 'tin-sheet',
+            id: 'tin-plate',
             name: 'Tin Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/tin.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/tin_sheet'
           }
@@ -3025,15 +2969,13 @@ export const METALS = [
   {
     id: 'brass',
     name: 'Brass',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/brass.png',
     color: getMaterialById('brass').color,
     subcategories: [
       {
         id: 'brass-ingot',
         name: 'Brass Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/brass.png',
         presets: [
           {
             id: 'brass-nugget',
@@ -3092,14 +3034,12 @@ export const METALS = [
       {
         id: 'brass-double-ingot',
         name: 'Brass Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/brass.png',
         presets: [
           {
-            id: 'brass-sheet',
+            id: 'brass-plate',
             name: 'Brass Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/brass.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/brass_sheet'
           },
@@ -3136,8 +3076,7 @@ export const METALS = [
       {
         id: 'brass-plate',
         name: 'Brass Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/brass.png',
         presets: [
           {
             id: 'brass-unfinished-barometer',
@@ -3145,6 +3084,27 @@ export const METALS = [
             img: 'img/_items/unfinished_barometer.png',
             last3: ['hit', 'draw', 'upset'],
             recipeId: 'firmaciv:anvil/unfinished_barometer'
+          }
+        ]
+      },
+      {
+        id: 'brass-double-plate',
+        name: 'Brass Double Plate',
+        img: 'img/double_plate/brass.png',
+        presets: [
+          {
+            id: 'brass-door',
+            name: 'Brass Door',
+            img: 'img/door/brass.png',
+            last3: ['draw', 'draw', 'punch'],
+            recipeId: 'tfg:anvil/createdeco_brass_door'
+          },
+          {
+            id: 'brass-unfinished-navigators-timepiece',
+            name: 'Unfinished Navigator’s Timepiece',
+            img: 'img/_items/unfinished_navigators_timepiece.png',
+            last3: ['upset', 'hit', 'hit'],
+            recipeId: 'firmaciv:anvil/unfinished_nav_clock'
           }
         ]
       },
@@ -3192,22 +3152,19 @@ export const METALS = [
   {
     id: 'blue-steel',
     name: 'Blue Steel',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/blue_steel.png',
     color: getMaterialById('blue-steel').color,
     subcategories: [
       {
         id: 'high-carbon-blue-steel',
         name: 'High Carbon Blue Steel',
-        img: 'img/ingot.png',
-        // overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/high_carbon_blue_steel.png',
         color: getMaterialById('high-carbon-blue-steel').color,
         presets: [
           {
             id: 'blue-steel-ingot',
             name: 'Blue Steel Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/blue_steel.png',
             color: getMaterialById('blue-steel').color,
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/blue_steel_ingot'
@@ -3217,8 +3174,7 @@ export const METALS = [
       {
         id: 'blue-steel-ingot',
         name: 'Blue Steel Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/blue_steel.png',
         presets: [
           {
             id: 'blue-steel-nugget',
@@ -3390,14 +3346,12 @@ export const METALS = [
       {
         id: 'blue-steel-double-ingot',
         name: 'Blue Steel Double Ingot',
-        img: 'img/ingot_double.png',
-        overlay: 'img/ingot_double_overlay.png',
+        img: 'img/double_ingot/blue_steel.png',
         presets: [
           {
-            id: 'blue-steel-sheet',
+            id: 'blue-steel-plate',
             name: 'Blue Steel Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/blue_steel.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/blue_steel_sheet'
           },
@@ -3463,8 +3417,7 @@ export const METALS = [
       {
         id: 'blue-steel-plate',
         name: 'Blue Steel Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/blue_steel.png',
         presets: [
           {
             id: 'blue-steel-trapdoor',
@@ -3492,8 +3445,7 @@ export const METALS = [
       {
         id: 'blue-steel-double-plate',
         name: 'Blue Steel Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/blue_steel.png',
         presets: [
           {
             id: 'blue-steel-tuyere',
@@ -3591,22 +3543,19 @@ export const METALS = [
   {
     id: 'red-steel',
     name: 'Red Steel',
-    img: 'img/ingot.png',
-    overlay: 'img/ingot_overlay.png',
+    img: 'img/ingot/red_steel.png',
     color: getMaterialById('red-steel').color,
     subcategories: [
       {
         id: 'high-carbon-red-steel',
         name: 'High Carbon Red Steel',
-        img: 'img/ingot.png',
-        // overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/high_carbon_red_steel.png',
         color: getMaterialById('high-carbon-red-steel').color,
         presets: [
           {
             id: 'red-steel-ingot',
             name: 'Red Steel Ingot',
-            img: 'img/ingot.png',
-            overlay: 'img/ingot_overlay.png',
+            img: 'img/ingot/red_steel.png',
             color: getMaterialById('red-steel').color,
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/red_steel_ingot'
@@ -3616,8 +3565,7 @@ export const METALS = [
       {
         id: 'red-steel-ingot',
         name: 'Red Steel Ingot',
-        img: 'img/ingot.png',
-        overlay: 'img/ingot_overlay.png',
+        img: 'img/ingot/red_steel.png',
         presets: [
           {
             id: 'red-steel-nugget',
@@ -3781,13 +3729,12 @@ export const METALS = [
       {
         id: 'red-steel-double-ingot',
         name: 'Red Steel Double Ingot',
-        img: 'img/_items/red_steel_double_ingot.png',
+        img: 'img/double_ingot/red_steel.png',
         presets: [
           {
-            id: 'red-steel-sheet',
+            id: 'red-steel-plate',
             name: 'Red Steel Plate',
-            img: 'img/plate.png',
-            overlay: 'img/plate_overlay.png',
+            img: 'img/plate/red_steel.png',
             last3: ['hit', 'hit', 'hit'],
             recipeId: 'tfc:anvil/red_steel_sheet'
           },
@@ -3853,8 +3800,7 @@ export const METALS = [
       {
         id: 'red-steel-plate',
         name: 'Red Steel Plate',
-        img: 'img/plate.png',
-        overlay: 'img/plate_overlay.png',
+        img: 'img/plate/red_steel.png',
         presets: [
           {
             id: 'red-steel-trapdoor',
@@ -3889,8 +3835,7 @@ export const METALS = [
       {
         id: 'red-steel-double-plate',
         name: 'Red Steel Double Plate',
-        img: 'img/plate_double.png',
-        overlay: 'img/plate_double_overlay.png',
+        img: 'img/double_plate/red_steel.png',
         presets: [
           {
             id: 'red-steel-tuyere',
