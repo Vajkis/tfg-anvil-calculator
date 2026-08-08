@@ -3150,6 +3150,114 @@ export const METALS = [
     ]
   },
   {
+    id: 'gold',
+    name: 'Gold',
+    img: 'img/ingot/gold.png',
+    color: getMaterialById('gold').color,
+    subcategories: [
+      {
+        id: 'gold-ingot',
+        name: 'Gold Ingot',
+        img: 'img/ingot/gold.png',
+        presets: [
+          {
+            id: 'gold-nugget',
+            name: 'Gold Nugget',
+            img: 'img/nugget.png',
+            overlay: 'img/nugget_overlay.png',
+            last3: ['punch', 'hit', 'punch'],
+            recipeId: 'tfc:anvil/gold'
+          },
+          {
+            id: 'gold-rod',
+            name: 'Gold Rod',
+            img: 'img/rod.png',
+            overlay: 'img/rod_overlay.png',
+            last3: ['draw'],
+            recipeId: 'tfc:anvil/gold_rod'
+          },
+          {
+            id: 'gold-tong-part',
+            name: 'Gold Tong Part',
+            img: 'img/tong_part/gold.png',
+            last3: ['hit', 'draw', 'bend'],
+            recipeId: 'tfchotornot:anvil/tong_part/gold'
+          }
+        ]
+      },
+      {
+        id: 'gold-double-ingot',
+        name: 'Gold Double Ingot',
+        img: 'img/double_ingot/gold.png',
+        presets: [
+          {
+            id: 'gold-plate',
+            name: 'Gold Plate',
+            img: 'img/plate/gold.png',
+            last3: ['hit', 'hit', 'hit'],
+            recipeId: 'tfc:anvil/gold_sheet'
+          }
+        ]
+      },
+      {
+        id: 'gold-rod',
+        name: 'Gold Rod',
+        img: 'img/rod.png',
+        overlay: 'img/rod_overlay.png',
+        presets: [
+          {
+            id: 'gold-small-spring',
+            name: 'Gold Small Spring',
+            img: 'img/spring_small.png',
+            overlay: 'img/spring_small_overlay.png',
+            last3: ['hit', 'bend', 'bend'],
+            recipeId: 'tfc:anvil/gold_small_spring'
+          },
+          {
+            id: 'gold-ring',
+            name: 'Gold Ring',
+            img: 'img/ring.png',
+            overlay: 'img/ring_overlay.png',
+            last3: ['hit', 'hit', 'hit'],
+            recipeId: 'tfc:anvil/gold_ring'
+          },
+          {
+            id: 'gold-screw',
+            name: 'Gold Screw',
+            img: 'img/screw.png',
+            overlay: 'img/screw_overlay.png',
+            last3: ['punch', 'punch', 'shrink'],
+            recipeId: 'tfc:anvil/gold_screw'
+          },
+          {
+            id: 'gold-bolt',
+            name: 'Gold Bolt',
+            img: 'img/bolt.png',
+            overlay: 'img/bolt_overlay.png',
+            last3: ['punch', 'draw', 'draw'],
+            recipeId: 'tfc:anvil/gold_bolt'
+          }
+        ]
+      },
+      {
+        id: 'gold-long-rod',
+        name: 'Gold Long Rod',
+        img: 'img/rod_long.png',
+        overlay: 'img/rod_long_overlay.png',
+        presets: [
+          {
+            id: 'gold-spring',
+            name: 'Gold Spring',
+            img: 'img/spring.png',
+            overlay: 'img/spring_overlay.png',
+            last3: ['hit', 'bend', 'bend'],
+            recipeId: 'tfc:anvil/gold_spring'
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'blue-steel',
     name: 'Blue Steel',
     img: 'img/ingot/blue_steel.png',

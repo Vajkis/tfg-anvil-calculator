@@ -52,6 +52,10 @@ export const MATERIALS = [
     color: '#fce892'
   },
   {
+    id: 'gold',
+    color: '#ffe240'
+  },
+  {
     id: 'high-carbon-blue-steel',
     color: '#4868c0'
   },
