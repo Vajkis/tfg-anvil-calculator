@@ -102,7 +102,7 @@ export const METALS = [
             id: 'copper-fish-hook',
             name: 'Copper Fish Hook',
             img: 'img/fish_hook/copper.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/copper_fish_hook'
           },
           {
@@ -349,7 +349,7 @@ export const METALS = [
             id: 'copper-unfinished-greaves',
             name: 'Copper Unfinished Greaves',
             img: 'img/unfinished_greaves/copper.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/copper_unfinished_greaves'
           },
           {
@@ -527,7 +527,7 @@ export const METALS = [
             id: 'bronze-fish-hook',
             name: 'Bronze Fish Hook',
             img: 'img/fish_hook/bronze.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/bronze_fish_hook'
           },
           {
@@ -740,7 +740,7 @@ export const METALS = [
             id: 'bronze-unfinished-greaves',
             name: 'Bronze Unfinished Greaves',
             img: 'img/unfinished_greaves/bronze.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/bronze_unfinished_greaves'
           },
           {
@@ -887,7 +887,7 @@ export const METALS = [
             id: 'bismuth-bronze-fish-hook',
             name: 'Bismuth Bronze Fish Hook',
             img: 'img/fish_hook/bismuth_bronze.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/bismuth_bronze_fish_hook'
           },
           {
@@ -1100,7 +1100,7 @@ export const METALS = [
             id: 'bismuth-bronze-unfinished-greaves',
             name: 'Bismuth Bronze Unfinished Greaves',
             img: 'img/unfinished_greaves/bismuth_bronze.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/bismuth_bronze_unfinished_greaves'
           },
           {
@@ -1247,7 +1247,7 @@ export const METALS = [
             id: 'black-bronze-fish-hook',
             name: 'Black Bronze Fish Hook',
             img: 'img/fish_hook/black_bronze.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/black_bronze_fish_hook'
           },
           {
@@ -1460,7 +1460,7 @@ export const METALS = [
             id: 'black-bronze-unfinished-greaves',
             name: 'Black Bronze Unfinished Greaves',
             img: 'img/unfinished_greaves/black_bronze.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/black_bronze_unfinished_greaves'
           },
           {
@@ -1728,7 +1728,7 @@ export const METALS = [
             id: 'wrought-iron-fish-hook',
             name: 'Wrought Iron Fish Hook',
             img: 'img/fish_hook/wrought_iron.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/wrought_iron_fish_hook'
           },
           {
@@ -1983,7 +1983,7 @@ export const METALS = [
             id: 'wrought-iron-unfinished-greaves',
             name: 'Wrought Iron Unfinished Greaves',
             img: 'img/unfinished_greaves/wrought_iron.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/wrought_iron_unfinished_greaves'
           },
           {
@@ -2213,7 +2213,7 @@ export const METALS = [
             id: 'steel-fish-hook',
             name: 'Steel Fish Hook',
             img: 'img/fish_hook/steel.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/steel_fish_hook'
           },
           {
@@ -2461,7 +2461,7 @@ export const METALS = [
             id: 'steel-unfinished-greaves',
             name: 'Steel Unfinished Greaves',
             img: 'img/unfinished_greaves/steel.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/steel_unfinished_greaves'
           },
           {
@@ -2648,7 +2648,7 @@ export const METALS = [
             id: 'black-steel-fish-hook',
             name: 'Black Steel Fish Hook',
             img: 'img/fish_hook/black_steel.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/black_steel_fish_hook'
           },
           {
@@ -2854,7 +2854,7 @@ export const METALS = [
             id: 'black-steel-unfinished-greaves',
             name: 'Black Steel Unfinished Greaves',
             img: 'img/unfinished_greaves/black_steel.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/black_steel_unfinished_greaves'
           },
           {
@@ -3367,7 +3367,7 @@ export const METALS = [
             id: 'blue-steel-fish-hook',
             name: 'Blue Steel Fish Hook',
             img: 'img/fish_hook/blue_steel.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/blue_steel_fish_hook'
           },
           {
@@ -3580,7 +3580,7 @@ export const METALS = [
             id: 'blue-steel-unfinished-greaves',
             name: 'Blue Steel Unfinished Greaves',
             img: 'img/unfinished_greaves/blue_steel.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/blue_steel_unfinished_greaves'
           },
           {
@@ -3758,7 +3758,7 @@ export const METALS = [
             id: 'red-steel-fish-hook',
             name: 'Red Steel Fish Hook',
             img: 'img/fish_hook/red_steel.png',
-            last3: [],
+            last3: ['bend', 'hit', 'draw'],
             recipeId: 'tfc:anvil/red_steel_fish_hook'
           },
           {
@@ -3970,7 +3970,7 @@ export const METALS = [
             id: 'red-steel-unfinished-greaves',
             name: 'Red Steel Unfinished Greaves',
             img: 'img/unfinished_greaves/red_steel.png',
-            last3: [],
+            last3: ['bend', 'draw', 'hit'],
             recipeId: 'tfc:anvil/red_steel_unfinished_greaves'
           },
           {
