@@ -56,8 +56,8 @@ export const METALS = [
             recipeId: 'tfc:anvil/copper_pickaxe_head'
           },
           {
-            id: 'copper-tree-tap',
-            name: 'Copper Tree Tap',
+            id: 'tree-tap',
+            name: 'Tree Tap',
             img: 'img/tree_tap.png',
             last3: ['hit', 'upset', 'upset'],
             recipeId: 'afc:anvil/tree_tap'
